@@ -71,7 +71,9 @@ def compute_seasonal_rate(room_num: str, multiplier: float) -> float:
     """Return the room price adjusted by a positive seasonal multiplier."""
     if not isinstance(room_num, str) or room_num not in ROOM_INVENTORY:
         raise ValueError(f"Unknown room: {room_num!r}")
-    if isinstance(multiplier, bool) or not isinstance(multiplier, (int, float)):
+    if isinstance(multiplier, bool) or not isinstance(
+        multiplier, (int, float)
+    ):
         raise TypeError("Multiplier must be a number")
     if not 0 < multiplier <= 5:
         raise ValueError("Multiplier must be greater than 0 and at most 5")

@@ -1,0 +1,5 @@
+Command: python -m pytest -q test_hotel_booking_system.py
+Exit code: 0
+
+........                                                                 [100%]
+8 passed in 0.19s
